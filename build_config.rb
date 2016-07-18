@@ -144,3 +144,47 @@ end
 #   conf.test_runner.command = 'env'
 #
 # end
+
+# Cross build for Renesas RX630
+MRuby::CrossBuild.new('rx630') do |conf|
+   toolchain :rx630
+
+#   conf.cc.flags << "-m32"
+#   conf.linker.flags << "-m32"
+#
+#   conf.build_mrbtest_lib_only
+#
+   #conf.gem "#{root}/mrbgems/mruby-array-ext"
+   ##conf.gem "#{root}/mrbgems/mruby-bin-debugger
+   ##conf.gem "#{root}/mrbgems/mruby-bin-mirb"
+   ##conf.gem "#{root}/mrbgems/mruby-bin-mrbc"
+   ##conf.gem "#{root}/mrbgems/mruby-bin-mruby"
+   ##conf.gem "#{root}/mrbgems/mruby-bin-mruby-config"
+   #conf.gem "#{root}/mrbgems/mruby-bin-strip"
+   #conf.gem "#{root}/mrbgems/mruby-compiler"
+   #conf.gem "#{root}/mrbgems/mruby-enumerator"
+   #conf.gem "#{root}/mrbgems/mruby-enum-ext"
+   #conf.gem "#{root}/mrbgems/mruby-enum-lazy"
+   #conf.gem "#{root}/mrbgems/mruby-error"
+   #conf.gem "#{root}/mrbgems/mruby-eval"
+   #conf.gem "#{root}/mrbgems/mruby-exit"
+   #conf.gem "#{root}/mrbgems/mruby-fiber"
+   #conf.gem "#{root}/mrbgems/mruby-hash-ext"
+   #conf.gem "#{root}/mrbgems/mruby-kernel-ext"
+   #conf.gem "#{root}/mrbgems/mruby-math"
+   conf.gem "#{root}/mrbgems/mruby-numeric-ext"  #10.chr
+   #conf.gem "#{root}/mrbgems/mruby-object-ext"
+   #conf.gem "#{root}/mrbgems/mruby-objectspace"
+   #conf.gem "#{root}/mrbgems/mruby-print"
+   #conf.gem "#{root}/mrbgems/mruby-proc-ext"
+   #conf.gem "#{root}/mrbgems/mruby-random"
+   #conf.gem "#{root}/mrbgems/mruby-range-ext"
+   conf.gem "#{root}/mrbgems/mruby-sprintf"
+   #conf.gem "#{root}/mrbgems/mruby-string-ext"	#str.split(",")
+   #conf.gem "#{root}/mrbgems/mruby-struct"
+   #conf.gem "#{root}/mrbgems/mruby-symbol-ext"
+   #conf.gem "#{root}/mrbgems/mruby-test"
+   #conf.gem "#{root}/mrbgems/mruby-time"
+   #conf.gem "#{root}/mrbgems/mruby-toplevel-ext"
+#
+end

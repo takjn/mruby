@@ -9,7 +9,7 @@
 
 /* configuration options: */
 /* add -DMRB_USE_FLOAT to use float instead of double for floating point numbers */
-//#define MRB_USE_FLOAT
+#define MRB_USE_FLOAT
 
 /* add -DMRB_INT16 to use 16bit integer for mrb_int; conflict with MRB_INT64 */
 //#define MRB_INT16
@@ -30,16 +30,16 @@
 //#define MRB_UTF8_STRING
 
 /* argv max size in mrb_funcall */
-//#define MRB_FUNCALL_ARGC_MAX 16
+#define MRB_FUNCALL_ARGC_MAX 6
 
 /* number of object per heap page */
-//#define MRB_HEAP_PAGE_SIZE 1024
+#define MRB_HEAP_PAGE_SIZE 24
 
 /* use segmented list for IV table */
-//#define MRB_USE_IV_SEGLIST
+#define MRB_USE_IV_SEGLIST
 
 /* initial size for IV khash; ignored when MRB_USE_IV_SEGLIST is set */
-//#define MRB_IVHASH_INIT_SIZE 8
+#define MRB_IVHASH_INIT_SIZE 3
 
 /* if _etext and _edata available, mruby can reduce memory used by symbols */
 //#define MRB_USE_ETEXT_EDATA
@@ -52,13 +52,13 @@
 //#define MRB_GC_TURN_OFF_GENERATIONAL
 
 /* default size of khash table bucket */
-//#define KHASH_DEFAULT_SIZE 32
+#define KHASH_DEFAULT_SIZE 2
 
 /* allocated memory address alignment */
 //#define POOL_ALIGNMENT 4
 
 /* page size of memory pool */
-//#define POOL_PAGE_SIZE 16000
+#define POOL_PAGE_SIZE 256
 
 /* initial minimum size for string buffer */
 //#define MRB_STR_BUF_MIN_SIZE 128
